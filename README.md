@@ -1,7 +1,7 @@
 # La vie d'une goutte d'eau
 
 ## Contexte  
-Les données utilisées dans ce projet proviennent de [opendata.swiss](https://opendata.swiss), une plateforme officielle de données ouvertes en Suisse. Ces données sont collectées par des organismes publics et visent à informer sur le cycle de l'eau, de son origine à son utilisation quotidienne, ainsi que sur son traitement après usage.  
+--- 
 
 ## Description  
 Les données sont structurées autour des différentes étapes du cycle de vie d'une goutte d'eau. Elles sont présentées sous forme de graphiques et statistiques (pourcentages, cartes, diagrammes) pour faciliter la compréhension.  
