@@ -3,23 +3,23 @@
 ## Contexte  
 --- 
 
-## Description  
+## Présentation du projet
 Les données sont structurées autour des différentes étapes du cycle de vie d'une goutte d'eau. Elles sont présentées sous forme de graphiques et statistiques (pourcentages, cartes, diagrammes) pour faciliter la compréhension.  
 
 ### Structure des données :  
-- **Numéro de l'étape**  
-- **Titre**  
-- **Description**  
-- **Statistiques (sous forme de pourcentages, graphiques ou cartes)**  
+- Numéro de l'étape 
+- Titre  
+- Description
+- Statistiques (sous forme de pourcentages, graphiques ou cartes)
 
 ## Étapes du cycle de l'eau  
 
 ### 1️⃣ Sources de l’eau  
 [SVGW - Distribution de l'eau](https://www.svgw.ch/fr/eau/outils-de-communication/distribution-deau/)  
 L'eau provient de trois sources principales :  
-- **Rivières**  
-- **Lacs**  
-- **Nappes phréatiques**  
+- Rivières  
+- Lacs
+- Nappes phréatiques
 
 ### 2️⃣ Traitement de l’eau  
 [SVGW - L'eau potable](https://www.svgw.ch/fr/eau/outils-de-communication/distribution-deau/leau-potable/)  
@@ -53,6 +53,74 @@ L’eau est utilisée pour :
 - Après traitement, l’eau est rejetée dans les lacs et rivières  
 - Processus d’évaporation, formation de nuages et précipitations  
 - Le cycle recommence 🌍  
+
+## Description 
+Les données que nous utiliserons seront organisées dans un fichier JSON structuré en plusieurs étapes, correspondant aux différentes phases de notre visualisation de données. 
+
+Ce fichier JSON inclut un tableau cycle_eau, qui regroupe chaque étape sous forme d'objet. Chaque objet possède des attributs spécifiques permettant de structurer les informations nécessaires. 
+
+Certaines visualisations afficheront uniquement du texte explicatif, tandis que d'autres intégreront des statistiques accompagnées de descriptions détaillées. 
+
+### Exemple de code JSON
+**Pour l'étape 1**
+```{
+  "etape": 1,
+  "nom": "Sources de l’eau",
+  "description": "La goutte d'eau atterrit dans l'une des trois sources naturelles.",
+  "donnees": [
+    {
+      "nom": "Rivière",
+      "description": "Cours d'eau naturel transportant l'eau de source vers les océans, lacs et nappes souterraines."
+    },
+    {
+      "nom": "Lac",
+      "description": "Vaste étendue d'eau douce ou salée stockant et régulant l'eau."
+    },
+    {
+      "nom": "Nappe phréatique",
+      "description": "Réserve souterraine d'eau alimentée par infiltration des précipitations."
+    }
+  ]
+}
+```
+**Pour l'étape 4**
+```{
+  "etape": 4,
+  "nom": "Sort d’un robinet et arrive au milieu du graphique des conso",
+  "description": "L'eau est utilisée pour différentes consommations domestiques et industrielles.",
+  "donnees": [
+    {
+      "nom": "Consommation moyenne par personne",
+      "valeur": 150,
+      "unite": "litres/jour",
+      "description": "Un individu consomme en moyenne 150 litres d'eau par jour pour l'hygiène, l'alimentation et les tâches ménagères."
+    }
+  ]
+}
+```
+### Attributs et types de données
+**Pour l'étape 1**
+| **Attribut**       | **Type de données** 
+|--------------------|--------------------|
+| `"etape"`         | Nombre entier       | 
+| `"nom"`           | Chaîne de caractères | 
+| `"description"`   | Chaîne de caractères | 
+| `"donnees"`       | Tableau d’objets     | 
+| → `"nom"`         | Chaîne de caractères |
+| → `"description"` | Chaîne de caractères | 
+
+**Pour l'étape 2**
+| **Attribut**       | **Type de données** |
+|--------------------|--------------------|
+| `"etape"`         | Nombre entier       | 
+| `"nom"`           | Chaîne de caractères | 
+| `"description"`   | Chaîne de caractères | 
+| `"donnees"`       | Tableau d’objets     |
+| → `"nom"`         | Chaîne de caractères | 
+| → `"valeur"`      | Nombre entier        | 
+| → `"unite"`       | Chaîne de caractères | 
+| → `"description"` | Chaîne de caractères | 
+
 
 ## But  
 Ce projet vise à **expliquer et illustrer** le cycle de l’eau en Suisse en mettant en avant :  
