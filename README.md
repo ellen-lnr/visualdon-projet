@@ -44,7 +44,7 @@ L’eau est utilisée pour :
 - Statistiques sur la consommation moyenne d’eau par humain et par jour  
 
 ### 6️⃣ Évacuation et traitement des eaux usées  
-[Etat-De-Vaud - Bilan annuel épuration vaudoise](https://www.vd.ch/fileadmin/user_upload/themes/environnement/eau/fichiers_pdf/DIREV_PRE/Bilans_2023_de_l_%C3%A9puration_vaudoise.pdf)
+[Etat-De-Vaud - Bilan annuel 2023 épuration vaudoise](https://www.vd.ch/fileadmin/user_upload/themes/environnement/eau/fichiers_pdf/DIREV_PRE/Bilans_2023_de_l_%C3%A9puration_vaudoise.pdf)
 - L'eau usée s’écoule dans les égouts  
 - Passage en station d’épuration (STEP) avec une carte géographiques des STEP dans le canton de Vaud 
 
