@@ -1,7 +1,7 @@
 # La vie d'une goutte d'eau
 
 ## Contexte  
---- 
+Les données viennent de 3 sites principaux ; SVGW, Etat de Vaud et Brita. SVGW est une association qui a pour but d’encourager la distribution d’une eau potable irréprochable en quantité suffisante et la coordination au sein de la branche tout en s’impliquant dans la protection des ressources d’eau. Brita est un site qui vend des filtres à eau, les données ont pour but d’accompagner la promotion de leur produit. Et l’Etat de Vaud met en ligne des informations officielles concernant le canton de Vaud. Dans ce cas-ci, le site mettais à disposition les bilans annuels et rapports des stations d’épuration des eaux usées. 
 
 ## Présentation du projet
 Les données sont structurées autour des différentes étapes du cycle de vie d'une goutte d'eau. Elles sont présentées sous forme de graphiques et statistiques (pourcentages, cartes, diagrammes) pour faciliter la compréhension.  
