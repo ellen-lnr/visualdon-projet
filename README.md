@@ -143,8 +143,13 @@ Les principales sources utilisées pour les données sont :
 ### Sources d'inspiration  
 Afin d’optimiser la présentation des données et de rendre les visualisations plus claires et impactantes, nous nous sommes inspirés de différentes approches graphiques et conceptuelles existantes. Ces références aident à structurer l’information de manière plus pédagogique et intuitive.  
 
-- [Cycle de l’eau – Attention aux fuites (QQF)](https://archives.qqf.fr/infographie/82/cycle-de-leau-attention-aux-fuites)
-- Streamgraph (https://observablehq.com/@d3/streamgraph/2)
+- [Cycle de l’eau – Attention aux fuites (QQF)](https://archives.qqf.fr/infographie/82/cycle-de-leau-attention-aux-fuites)  
+- [Streamgraph avec D3.js (ObservableHQ)](https://observablehq.com/@d3/streamgraph/2)  
+- [Inspiration graphique - Pinterest 1](https://fr.pinterest.com/pin/954833558486798053/)  
+- [Inspiration graphique - Pinterest 2](https://fr.pinterest.com/pin/703968985521208573/)  
+- [Inspiration graphique - Pinterest 3](https://fr.pinterest.com/pin/15058979996995434/)  
+- [Infographie - Crainte d’une pénurie d’eau (CIEAU)](https://www.cieau.com/lobservatoire-de-leau/c-i-eau-infographies/la-crainte-dune-penurie-deau-dans-lavenir/)  
+- [Infographie - Eau du robinet vs eau en bouteille (CIEAU)](https://www.cieau.com/lobservatoire-de-leau/c-i-eau-infographies/eau-du-robinet-eau-en-bouteille-que-boivent-les-francais/)  
 - [Made in France - Infographie](https://www.raconteur.net/infographics/made-in-france) (l'infographie téléchargée est de meilleure qualité)
 
 Ce projet s’inspire des recherches en gestion de l’eau en Suisse et des initiatives environnementales visant à mieux comprendre et préserver cette ressource essentielle. 
