@@ -109,7 +109,7 @@ Certaines visualisations afficheront uniquement du texte explicatif, tandis que 
 | → `"nom"`         | Chaîne de caractères |
 | → `"description"` | Chaîne de caractères | 
 
-**Pour l'étape 2**
+**Pour l'étape 4**
 | **Attribut**       | **Type de données** |
 |--------------------|--------------------|
 | `"etape"`         | Nombre entier       | 
