@@ -145,5 +145,6 @@ Afin d’optimiser la présentation des données et de rendre les visualisations
 
 - [Cycle de l’eau – Attention aux fuites (QQF)](https://archives.qqf.fr/infographie/82/cycle-de-leau-attention-aux-fuites)
 - Streamgraph (https://observablehq.com/@d3/streamgraph/2)
+- [Made in France - Infographie](https://www.raconteur.net/infographics/made-in-france) (l'infographie téléchargée est de meilleure qualité)
 
 Ce projet s’inspire des recherches en gestion de l’eau en Suisse et des initiatives environnementales visant à mieux comprendre et préserver cette ressource essentielle. 
