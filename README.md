@@ -135,6 +135,7 @@ Grâce à des infographies et visualisations interactives, l’objectif est de s
 ## Références  
 Les principales sources utilisées sont :  
 - [SVGW - Association Suisse du Gaz et de l’Eau](https://www.svgw.ch/)  
-- [Energie-Environnement - Consommation d’eau](https://www.energie-environnement.ch/economiser-l-eau/situer-sa-consommation-d-eau)  
+- [Energie-Environnement - Consommation d’eau](https://www.energie-environnement.ch/economiser-l-eau/situer-sa-consommation-d-eau)
+- https://www.vd.ch/fileadmin/user_upload/themes/environnement/eau/fichiers_pdf/DIREV_PRE/Bilans_2023_de_l_%C3%A9puration_vaudoise.pdf
 
 Ce projet s’inspire des recherches en gestion de l’eau en Suisse et des initiatives environnementales visant à mieux comprendre et préserver cette ressource essentielle.  
