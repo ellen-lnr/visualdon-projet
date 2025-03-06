@@ -133,9 +133,16 @@ Ce projet vise à **expliquer et illustrer** le cycle de l’eau en Suisse en me
 Grâce à des infographies et visualisations interactives, l’objectif est de sensibiliser le public sur la gestion durable de l’eau.  
 
 ## Références  
-Les principales sources utilisées sont :  
-- [SVGW - Association Suisse du Gaz et de l’Eau](https://www.svgw.ch/)  
-- [Energie-Environnement - Consommation d’eau](https://www.energie-environnement.ch/economiser-l-eau/situer-sa-consommation-d-eau)
-- [État de Vaud](https://www.vd.ch/fileadmin/user_upload/themes/environnement/eau/fichiers_pdf/DIREV_PRE/Bilans_2023_de_l_%C3%A9puration_vaudoise.pdf)
 
-Ce projet s’inspire des recherches en gestion de l’eau en Suisse et des initiatives environnementales visant à mieux comprendre et préserver cette ressource essentielle.)  
+### Sources de données  
+Les principales sources utilisées pour les données sont :  
+- [SVGW - Association Suisse du Gaz et de l’Eau](https://www.svgw.ch/)  
+- [Energie-Environnement - Consommation d’eau](https://www.energie-environnement.ch/economiser-l-eau/situer-sa-consommation-d-eau)  
+- [État de Vaud](https://www.vd.ch/fileadmin/user_upload/themes/environnement/eau/fichiers_pdf/DIREV_PRE/Bilans_2023_de_l_%C3%A9puration_vaudoise.pdf)  
+
+### Sources d'inspiration  
+Afin d’optimiser la présentation des données et de rendre les visualisations plus claires et impactantes, nous nous sommes inspirés de différentes approches graphiques et conceptuelles existantes. Ces références aident à structurer l’information de manière plus pédagogique et intuitive.  
+
+- [Cycle de l’eau – Attention aux fuites (QQF)](https://archives.qqf.fr/infographie/82/cycle-de-leau-attention-aux-fuites)  
+
+Ce projet s’inspire des recherches en gestion de l’eau en Suisse et des initiatives environnementales visant à mieux comprendre et préserver cette ressource essentielle. 
