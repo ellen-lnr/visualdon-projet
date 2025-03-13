@@ -141,7 +141,8 @@ Les principales sources utilisées pour les données sont :
 - [État de Vaud](https://www.vd.ch/fileadmin/user_upload/themes/environnement/eau/fichiers_pdf/DIREV_PRE/Bilans_2023_de_l_%C3%A9puration_vaudoise.pdf)  
 
 ### Sources d'inspiration  
-Afin d’optimiser la présentation des données et de rendre les visualisations plus claires et impactantes, nous nous sommes inspirés de différentes approches graphiques et conceptuelles existantes. Ces références aident à structurer l’information de manière plus pédagogique et intuitive.  
+Afin d’optimiser la présentation des données et de rendre les visualisations plus claires et impactantes, nous nous sommes inspirés de différentes approches graphiques et conceptuelles existantes. Ces références aident à structurer l’information de manière plus pédagogique et intuitive. 
+Pour nous aider à garder une cohérence tout au long du projet nous avosn décidé de réaliser un moodBoard: [📄 Voir le PDF](moodboard.pdf)
 
 - [Dataviz Project](https://datavizproject.com/)  
 - [Cycle de l’eau – Attention aux fuites (QQF)](https://archives.qqf.fr/infographie/82/cycle-de-leau-attention-aux-fuites)  
