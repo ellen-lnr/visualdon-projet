@@ -143,6 +143,7 @@ Les principales sources utilisées pour les données sont :
 ### Sources d'inspiration  
 Afin d’optimiser la présentation des données et de rendre les visualisations plus claires et impactantes, nous nous sommes inspirés de différentes approches graphiques et conceptuelles existantes. Ces références aident à structurer l’information de manière plus pédagogique et intuitive.  
 
+- [Dataviz Project](https://datavizproject.com/)  
 - [Cycle de l’eau – Attention aux fuites (QQF)](https://archives.qqf.fr/infographie/82/cycle-de-leau-attention-aux-fuites)  
 - [Streamgraph avec D3.js (ObservableHQ)](https://observablehq.com/@d3/streamgraph/2)  
 - [Inspiration graphique - Pinterest 1](https://fr.pinterest.com/pin/954833558486798053/)  
