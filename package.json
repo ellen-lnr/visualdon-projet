@@ -1,0 +1,31 @@
+{
+  "name": "visualdon-projet",
+  "version": "1.0.0",
+  "description": "## Contexte   Les données viennent de 3 sites principaux ; SVGW, Etat de Vaud et Brita. SVGW est une association qui a pour but d’encourager la distribution d’une eau potable irréprochable en quantité suffisante et la coordination au sein de la branche tout en s’impliquant dans la protection des ressources d’eau. Brita est un site qui vend des filtres à eau, les données ont pour but d’accompagner la promotion de leur produit. Et l’Etat de Vaud met en ligne des informations officielles concernant le canton de Vaud. Dans ce cas-ci, le site mettais à disposition les bilans annuels et rapports des stations d’épuration des eaux usées.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellen-lnr/visualdon-projet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ellen-lnr/visualdon-projet/issues"
+  },
+  "homepage": "https://github.com/ellen-lnr/visualdon-projet#readme",
+  "dependencies": {
+    "d3-array": "^3.2.4",
+    "d3-fetch": "^3.0.1",
+    "d3-selection": "^3.0.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.2"
+  }
+}
