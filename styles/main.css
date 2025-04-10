@@ -1,3 +1,21 @@
 h1{
     color: rgb(70, 62, 157);
 }
+
+section {
+    height: 400px; /* Hauteur fixe */
+    width: 100%;   /* Largeur complète */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+  }
+  
+  .section1 { background-color: #1abc9c; }
+  .section2 { background-color: #3498db; }
+  .section3 { background-color: #9b59b6; }
+  .section4 { background-color: #e67e22; }
+  .section5 { background-color: #e74c3c; }
+  .section6 { background-color: #2c3e50; }
+  
