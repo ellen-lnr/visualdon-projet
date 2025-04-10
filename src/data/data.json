@@ -1,0 +1,154 @@
+[
+    {
+        "etape": 1,
+        "nom": "Sources de l\u2019eau",
+        "description": "La goutte d'eau atterrit dans l'une des trois sources naturelles.",
+        "donnees": [
+            {
+                "nom": "Eau de source",
+                "description": "40% de l\u2019eau potable provient de sources situ\u00e9es dans l\u2019espace alpin et du Jura. Elle est achemin\u00e9e via des tuyaux de drainage."
+            },
+            {
+                "nom": "Eaux souterraines",
+                "description": "40% de l\u2019eau potable provient des nappes phr\u00e9atiques situ\u00e9es principalement sur le plateau suisse."
+            },
+            {
+                "nom": "Eaux de lacs",
+                "description": "20% de l\u2019eau potable provient des lacs, gr\u00e2ce \u00e0 30 stations de traitement r\u00e9parties en Suisse."
+            }
+        ]
+    },
+    {
+        "etape": 2,
+        "nom": "Captage et filtration naturelle",
+        "description": "L\u2019eau traverse diff\u00e9rentes couches naturelles du sol avant d\u2019\u00eatre capt\u00e9e et filtr\u00e9e.",
+        "donnees": [
+            {
+                "numero": 1,
+                "element": "humus"
+            },
+            {
+                "numero": 2,
+                "element": "gravier et sable"
+            },
+            {
+                "numero": 3,
+                "element": "sable"
+            },
+            {
+                "numero": 4,
+                "element": "argile ou roche"
+            },
+            {
+                "numero": 5,
+                "element": "eau"
+            },
+            {
+                "numero": 6,
+                "element": "gravier"
+            },
+            {
+                "numero": 7,
+                "element": "drains"
+            },
+            {
+                "numero": 8,
+                "element": "chambre de captage"
+            },
+            {
+                "numero": 9,
+                "element": "filtre"
+            },
+            {
+                "numero": 10,
+                "element": "\u00e9chelle"
+            },
+            {
+                "numero": 11,
+                "element": "conduite d\u2019amen\u00e9e au r\u00e9servoir"
+            }
+        ]
+    },
+    {
+        "etape": 3,
+        "nom": "Acheminement de l\u2019eau",
+        "description": "Acheminement par des r\u00e9seaux de conduites sur plusieurs kilom\u00e8tres et raccordement aux infrastructures domestiques et industrielles.",
+        "donnees": [
+            {
+                "type": "Conduites de distribution",
+                "longueur_km": 61600,
+                "description": "R\u00e9seau principal qui transporte l\u2019eau potable depuis les stations jusqu\u2019aux zones d\u2019habitation."
+            },
+            {
+                "type": "Conduites de raccordement",
+                "longueur_km": 33800,
+                "description": "R\u00e9seau secondaire qui relie les conduites principales aux b\u00e2timents domestiques et industriels."
+            },
+            {
+                "type": "Total du r\u00e9seau",
+                "longueur_km": 95400,
+                "description": "Ensemble du r\u00e9seau de conduites d\u2019eau potable en Suisse, soit plus de deux fois le tour de la Terre."
+            }
+        ]
+    },
+    {
+        "etape": 4,
+        "nom": "Utilisation domestique",
+        "description": "L\u2019eau est utilis\u00e9e pour la consommation, l\u2019hygi\u00e8ne et le nettoyage dans les foyers suisses.",
+        "donnees": [
+            {
+                "type": "\u00e9vier de cuisine",
+                "pourcentage": 15.5,
+                "litres": 22
+            },
+            {
+                "type": "douche, baignoire",
+                "pourcentage": 25.3,
+                "litres": 36
+            },
+            {
+                "type": "chasse d\u2019eau",
+                "pourcentage": 28.9,
+                "litres": 40
+            },
+            {
+                "type": "lave-vaisselle",
+                "pourcentage": 2.1,
+                "litres": 4
+            },
+            {
+                "type": "eau de boisson",
+                "pourcentage": null,
+                "litres": 1
+            },
+            {
+                "type": "lavabo de salle de bain",
+                "pourcentage": 11.3,
+                "litres": 16
+            },
+            {
+                "type": "machine \u00e0 laver",
+                "pourcentage": 12.0,
+                "litres": 17
+            },
+            {
+                "type": "espace ext\u00e9rieur",
+                "pourcentage": 4.9,
+                "litres": 4
+            }
+        ],
+        "total_litres_par_jour": 142,
+        "note": "La douche, le bain et la toilette repr\u00e9sentent plus de 50% de la consommation d'eau domestique"
+    },
+    {
+        "etape": 5,
+        "nom": "Consommation d\u2019eau par jour",
+        "description": "La goutte d'eau continue son chemin et tombe dans un verre. Statistiques sur la consommation moyenne d\u2019eau par humain et par jour.",
+        "donnees": {
+            "consommation_moyenne_par_jour": "140 litres",
+            "equivalent_bouteilles": "93 bouteilles de 1.5 L",
+            "prix_m3": "CHF 2.-",
+            "volume_m3": "1000 litres (environ 666 bouteilles)"
+        }
+    }
+]
