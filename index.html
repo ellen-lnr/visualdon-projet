@@ -10,7 +10,6 @@
     <title>Visual Don</title>
   </head>
   <body>
-    <h1>VisualDon project</h1>
     <section class="section1">
       <h1>Cycle de vie d'une goutte d'eau</h1>
       <p>
@@ -19,22 +18,36 @@
         vapeur, je change sans cesse, mais je reste toujours la même : une
         petite goutte essentielle à la vie. Tu viens avec moi ? 🌍✨
       </p>
+      <p>Scroll pour découvrir mon aventure...</p>
       <img class="goutte" src="/assets/svg/goutte_eau.svg" alt="Goutte d'eau" />
     </section>
     <section class="section2">
-      Section 2
-      
+      <div id="sources-eau"></div>
     </section>
-    <section class="section3">Section 3</section>
-    <section class="section4">Section 4</section>
-    <section class="section5">Section 5</section>
+    <section class="section31">
+      <div id="couches"></div>
+    </section>
+    <section class="section32">
+      <div id="filtration"></div>
+    </section>
+    <section class="section4">
+      <div id="canalisations"></div>
+    </section>
+    <section class="section5">
+      <h3>Utilisation</h3>
+    </section>
     <section class="section6">
       <h2>Carte des stations d'épuration en Suisse</h2>
      <!-- <div id="map" style="height: 500px"></div>-->
     </section>
 
    <!--<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>-->
-
-    <script src="/src/index.js"></script>
+   <script src="./etapes/1_sources_eau.js" defer></script>
+   <script src="./etapes/canalisations.js" defer></script>
+   <script src="./etapes/filtration.js" defer></script>
+   <script src="./etapes/couches_terre.js" defer></script>
+ 
   </body>
 </html>
+
+
