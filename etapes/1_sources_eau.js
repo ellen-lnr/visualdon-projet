@@ -14,4 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Erreur de chargement SVG :', error);
         });
-});
+});a
