@@ -93,3 +93,7 @@ section {
 .small3.disperse {
   transform: translate(50px, -70px);
 }
+
+.section2 {
+  padding-top: 600px;
+}
