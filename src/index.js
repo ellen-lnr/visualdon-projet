@@ -76,40 +76,48 @@ window.addEventListener("scroll", () => {
       });
     }, 50);
 
-  } else if (isInSection4) {
-    // Calculer progression lente le long du path
-    const scrollInSection4 = scrollTop + viewportHeight - section4Top;
-
-    const pauseThreshold = 100; // px pour pause au début
-    let progressOnPath = 0;
-
-    if (scrollInSection4 > pauseThreshold) {
-      // facteur ralentissement
-      const slowFactor = 4;
-      progressOnPath = Math.min((scrollInSection4 - pauseThreshold) / (section4Height * slowFactor), 1);
-    }
-
-    // Position sur le path
+  }
+  
+  else if (isInSection4) {
+    const scrollInSection4 = scrollTop - section4Top;
+  
+    // Ralentissement de la progression
+    const slowFactor = 4;
+    const usableHeight = section4Height;
+    const progressOnPath = Math.min((scrollInSection4 / slowFactor) / usableHeight, 1);
+  
+    // Récupère le point sur le path
     const point = motionPath.getPointAtLength(pathLength * progressOnPath);
-
-    // Calcul pour décaler X en fonction de lastTranslateX (position à la fin de section32)
-    const x = lastTranslateX;  
+  
+    const x = lastTranslateX;
     const y = point.y;
+  
 
+    const scale = 0.7;
+    const verticalCompensation = 1000 * (1 - scale); 
+  
     droplet.style.display = "block";
     droplet.style.opacity = "1";
     droplet.style.transition = "transform 0.1s linear";
-
-    droplet.style.transform = `translate(${x}px, ${y}px) scale(0.7)`;
-
+  
+    droplet.style.transform = `translate(${x}px, ${y - verticalCompensation}px) scale(${scale})`;
+    droplet.style.transformOrigin = "center center";
+  
     dropletp.style.display = "block";
     dropletp.style.opacity = "1";
-
-  } else if (isInSection32) {
+  }
+  
+   else if (isInSection32) {
     const maxTranslateX = -270;
     const progress = Math.min((scrollTop + viewportHeight - section32Top) / viewportHeight, 1);
     const translateX = maxTranslateX * progress;
     lastTranslateX = translateX; 
+
+
+ 
+    const maxYOffset = 250; // pixels à remonter
+    const yOffset = maxYOffset * progress; // yOffset augmente avec le scroll
+    
 
     const startColor = [2, 83, 110];
     const endColor = [0, 191, 255];
@@ -121,6 +129,9 @@ window.addEventListener("scroll", () => {
     dropletp.style.display = "block";
     dropletp.style.opacity = "1";
     droplet.style.transform = `translateX(${translateX}px)`;
+    dropletp.setAttribute("fill", colorString);
+
+    droplet.style.transform = `translate(${translateX}px, ${-yOffset}px)`;
     dropletp.setAttribute("fill", colorString);
 
   } else {

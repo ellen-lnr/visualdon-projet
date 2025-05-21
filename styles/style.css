@@ -55,6 +55,7 @@ section {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
+  overflow: visible;
 }
 
 #droplet-container {
@@ -63,6 +64,11 @@ section {
   height: 100%; /* ou hauteur adaptée */
   overflow: visible; /* pour que la goutte ne soit pas coupée */
 }
+#droplet, #droplet path {
+  transform-origin: center center;
+  will-change: transform;
+}
+
 
 #droplet {
   position: absolute;
@@ -212,4 +218,3 @@ section {
   z-index: 2;
   text-align: left;
 }
-
