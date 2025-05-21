@@ -1,5 +1,7 @@
 import { createDropletSVG } from "../etapes/1_gouttes.js";
 import initSourcesHover from "../etapes/2_sources_eau.js";
+import initCouchesTerre from "../etapes/31_couches_terre.js";
+
 
 const section32 = document.querySelector(".section32");
 const container = document.getElementById("droplet-container");
@@ -23,6 +25,8 @@ window.addEventListener("load", () => {
 
   // Initialise les effets de survol sur la section "sources-eau"
   initSourcesHover();
+
+  initCouchesTerre();
 });
 
 const firstTransitionDistance = 300;

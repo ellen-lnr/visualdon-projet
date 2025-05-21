@@ -8,6 +8,7 @@ body {
   background: black;
   color: white;
   line-height: 1.5;
+  font-size: small;
 }
 
 section {
@@ -46,7 +47,7 @@ section {
   overflow-wrap: break-word;
 }
 
-/* Fixe le container au centre écran avec un bon z-index */
+
 #droplet-container svg {
   position: fixed;
   top: calc(50% + 290px);
@@ -140,26 +141,66 @@ section {
 
 .section31 {
   padding-top: 300px;
-  width: fit-content; /* pleine largeur du viewport */
-  position: relative; /* si tu veux positionner d'autres éléments dedans */
-  overflow: hidden; /* utile si tu animes des éléments dedans */
+  width: fit-content; 
+  position: relative; 
+  overflow: hidden; 
 }
 
 .section31 img {
   width: 100%;
-  display: block; /* supprime les espaces blancs sous les images inline */
+  display: block;
 }
 
 .section32 {
-  width: fit-content; /* pleine largeur du viewport */
-  position: relative; /* si tu veux positionner d'autres éléments dedans */
-  overflow: hidden; /* utile si tu animes des éléments dedans */
+  width: fit-content; 
+  position: relative; 
+  overflow: hidden; 
 }
 .section32 img {
   width: 100%;
-  display: block; /* supprime les espaces blancs sous les images inline */
+  display: block; 
 }
 
 .section4{
   padding-right: 110px;
 }
+
+.section31 {
+  position: relative;
+}
+
+.texte-couches {
+  position: absolute;
+  top: 20%;
+  left: 5%; 
+  transform: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 135px; 
+  pointer-events: none;
+  padding-top: 150px;
+  text-transform: uppercase; 
+}
+
+.texte-description-droite {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 30%;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  border-radius: 8px;
+  border: 2px solid white; 
+  padding: 1rem;
+  margin-top: 300px;
+  border-radius: 8px;
+  z-index: 2;
+  text-align: left;
+}
+
