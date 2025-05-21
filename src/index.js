@@ -1,10 +1,9 @@
 import { createDropletSVG } from "../etapes/gouttes.js";
 import initSourcesHover from "../etapes/1_sources_eau.js";
 
-
-
+const section32 = document.querySelector(".section32");
 const container = document.getElementById("droplet-container");
-const moveDistance = 300;
+
 
 let svg = createDropletSVG();
 container.appendChild(svg);
@@ -31,6 +30,10 @@ const lastTransitionStart = 860;
 
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
+  const viewportHeight = window.innerHeight;
+
+  const section32Top = section32.offsetTop;
+  const isInSection32 = scrollTop + viewportHeight > section32Top;
 
   if (scrollTop < firstTransitionDistance) {
     // Première transition (grosse goutte visible)
@@ -57,8 +60,22 @@ window.addEventListener("scroll", () => {
       });
     }, 50);
 
+  } else if (isInSection32) {
+    // Déviation vers la gauche dans .section32
+    const maxTranslateX = -270; // px
+    const progress = Math.min((scrollTop + viewportHeight - section32Top) / viewportHeight, 1);
+    const translateX = maxTranslateX * progress;
+
+    droplet.style.display = "block";
+    droplet.style.opacity = "1";
+    droplet.style.transform = `translateX(${translateX}px)`;
+
+    smallDroplets.style.display = "none";
+    smallDroplets.classList.remove("active");
+    smallDroplets.querySelectorAll("circle").forEach(c => c.classList.remove("disperse"));
+
   } else {
-    // Reset quand on dépasse lastTransitionStart (scroll plus bas)
+    // Reset en dehors de section32
     smallDroplets.style.display = "none";
     smallDroplets.classList.remove("active");
     smallDroplets.querySelectorAll("circle").forEach(c => c.classList.remove("disperse"));

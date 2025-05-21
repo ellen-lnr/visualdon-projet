@@ -19,7 +19,6 @@ section {
   justify-content: center;
   color: white;
   font-size: 2em;
-  padding-top: 120px;
   background-color: #0F142A;
   box-sizing: border-box;
   overflow: hidden;
@@ -32,6 +31,7 @@ section {
   align-items: center;
   justify-content: center;
   color: white;
+  padding-top: 120px;
   font-size: 2em;
   box-sizing: border-box;
   overflow: visible;
@@ -140,12 +140,22 @@ section {
 
 .section31 {
   padding-top: 300px;
-  width: 100vw; /* pleine largeur du viewport */
+  width: fit-content; /* pleine largeur du viewport */
   position: relative; /* si tu veux positionner d'autres éléments dedans */
   overflow: hidden; /* utile si tu animes des éléments dedans */
 }
 
 .section31 img {
+  width: 100%;
+  display: block; /* supprime les espaces blancs sous les images inline */
+}
+
+.section32 {
+  width: fit-content; /* pleine largeur du viewport */
+  position: relative; /* si tu veux positionner d'autres éléments dedans */
+  overflow: hidden; /* utile si tu animes des éléments dedans */
+}
+.section32 img {
   width: 100%;
   display: block; /* supprime les espaces blancs sous les images inline */
 }
