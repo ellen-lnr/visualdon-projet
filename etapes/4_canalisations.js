@@ -1,17 +1,2 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.section4');
 
-    fetch('./assets/svg/canalisations.svg')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erreur de chargement du fichier SVG');
-            }
-            return response.text();
-        })
-        .then(svgContent => {
-            container.innerHTML = svgContent;
-        })
-        .catch(error => {
-            console.error('Erreur de chargement SVG :', error);
-        });
-});
+export const dropletPathD = "M228.999 0.5V134C228.999 134 231.498 185.5 298.999 197.5C366.5 209.5 648.498 197.5 680.499 197.5C712.5 197.5 740.498 233 750.499 264.5C760.5 296 762 530.5 750.499 555.5C738.998 580.5 109.998 559.5 78.499 555.5C47 551.5 1.49872 590 1.49903 609C1.49934 628 1.49898 876.5 1.49903 943.5C1.49907 1010.5 28.4988 1017 78.499 1017C128.499 1017 402.999 1017 402.999 1017V1204.5";

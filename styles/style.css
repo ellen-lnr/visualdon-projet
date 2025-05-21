@@ -57,9 +57,18 @@ section {
   z-index: 9999;
 }
 
-/* Style grosse goutte */
+#droplet-container {
+  position: relative; /* conteneur de référence */
+  width: 100%; /* ou largeur adaptée */
+  height: 100%; /* ou hauteur adaptée */
+  overflow: visible; /* pour que la goutte ne soit pas coupée */
+}
+
 #droplet {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center; /* pour bien scaler autour du centre */
 }
 
 /* Petites gouttes cachées au départ */

@@ -17,7 +17,7 @@ export function createDropletSVG() {
   
     const path = document.createElementNS(svgNS, "path");
     path.setAttribute("d", "M75 0C60 20 20 70 20 115C20 150 45 175 75 175C105 175 130 150 130 115C130 70 90 20 75 0Z");
-    path.setAttribute("fill", "#35B2E0");
+    path.setAttribute("fill", "#02536E");
   
     const circle = document.createElementNS(svgNS, "circle");
     circle.setAttribute("cx", "100");
@@ -40,21 +40,21 @@ export function createDropletSVG() {
     small1.setAttribute("cx", "-260");
     small1.setAttribute("cy", "130");
     small1.setAttribute("r", "12");
-    small1.setAttribute("fill", "#35B2E0");
+    small1.setAttribute("fill", "#02536E");
   
     const small2 = document.createElementNS(svgNS, "circle");
     small2.setAttribute("class", "small2");
     small2.setAttribute("cx", "75");
     small2.setAttribute("cy", "150");
     small2.setAttribute("r", "10");
-    small2.setAttribute("fill", "#35B2E0");
+    small2.setAttribute("fill", "#02536E");
   
     const small3 = document.createElementNS(svgNS, "circle");
     small3.setAttribute("class", "small3");
     small3.setAttribute("cx", "380");
     small3.setAttribute("cy", "130");
     small3.setAttribute("r", "8");
-    small3.setAttribute("fill", "#35B2E0");
+    small3.setAttribute("fill", "#02536E");
   
     smallGroup.appendChild(small1);
     smallGroup.appendChild(small2);
