@@ -4,7 +4,7 @@ export function createDropletSVG() {
     // Création du SVG
     const svg = document.createElementNS(svgNS, "svg");
     svg.setAttribute("id", "droplet-svg");
-    svg.setAttribute("width", "250");
+    svg.setAttribute("width", "1000");
     svg.setAttribute("height", "250");
     svg.setAttribute("viewBox", "0 0 150 300");
     svg.setAttribute("aria-hidden", "true");
@@ -37,7 +37,7 @@ export function createDropletSVG() {
   
     const small1 = document.createElementNS(svgNS, "circle");
     small1.setAttribute("class", "small1");
-    small1.setAttribute("cx", "45");
+    small1.setAttribute("cx", "-260");
     small1.setAttribute("cy", "130");
     small1.setAttribute("r", "12");
     small1.setAttribute("fill", "#35B2E0");
@@ -51,7 +51,7 @@ export function createDropletSVG() {
   
     const small3 = document.createElementNS(svgNS, "circle");
     small3.setAttribute("class", "small3");
-    small3.setAttribute("cx", "105");
+    small3.setAttribute("cx", "380");
     small3.setAttribute("cy", "130");
     small3.setAttribute("r", "8");
     small3.setAttribute("fill", "#35B2E0");

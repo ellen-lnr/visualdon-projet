@@ -97,3 +97,44 @@ section {
 .section2 {
   padding-top: 600px;
 }
+
+.hover-group .alt {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.hover-group .default {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.hover-group:hover .alt {
+  opacity: 1;
+}
+
+.hover-group:hover .default {
+  opacity: 0;
+}
+#group-bloc1 text {
+  transition: transform 0.3s ease;
+  transform-origin: 102.75px center;
+}
+
+#group-bloc2 text {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+#group-bloc3 text {
+  transition: transform 0.3s ease;
+  transform-origin: 713.25px center;
+}
+
+#group-bloc1:hover text,
+#group-bloc2:hover text,
+#group-bloc3:hover text {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
