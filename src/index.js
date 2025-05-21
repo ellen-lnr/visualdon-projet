@@ -1,5 +1,5 @@
-import { createDropletSVG } from "../etapes/gouttes.js";
-import initSourcesHover from "../etapes/1_sources_eau.js";
+import { createDropletSVG } from "../etapes/1_gouttes.js";
+import initSourcesHover from "../etapes/2_sources_eau.js";
 
 const section32 = document.querySelector(".section32");
 const container = document.getElementById("droplet-container");
@@ -62,7 +62,7 @@ window.addEventListener("scroll", () => {
 
   } else if (isInSection32) {
     // Déviation vers la gauche dans .section32
-    const maxTranslateX = -270; // px
+    const maxTranslateX = -270;
     const progress = Math.min((scrollTop + viewportHeight - section32Top) / viewportHeight, 1);
     const translateX = maxTranslateX * progress;
 

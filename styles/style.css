@@ -159,3 +159,7 @@ section {
   width: 100%;
   display: block; /* supprime les espaces blancs sous les images inline */
 }
+
+.section4{
+  padding-right: 110px;
+}
