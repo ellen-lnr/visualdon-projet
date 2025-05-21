@@ -1,9 +1,9 @@
 <svg width="2258" height="1345" viewBox="0 0 2258 1345" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M355.5 922.956L0 0H2258L1546 922.956H1010.5L921.247 1345H622.209L496 922.956H355.5Z" fill="url(#paint0_linear_158_49)"/>
-<path d="M93 241L841.352 272L1470.36 219L2024 305" stroke="#373737" stroke-width="6"/>
-<path d="M102 267L660.825 230L1174.36 285L1644.43 215L1836.44 304L2052 267" stroke="#373737" stroke-width="6"/>
-<path d="M81 209L532.747 300L1245.89 209L1528.23 259.05L2041 281.8" stroke="#373737" stroke-width="6"/>
-<path d="M116 300L563.599 250L1270.19 300L1549.94 272.5L2058 260" stroke="#373737" stroke-width="6"/>
+<path d="M243.5 922.956L0 0H2258L1959 922.956H1584.5L1434.5 1345H881.5L721 922.956H243.5Z" fill="url(#paint0_linear_158_49)"/>
+<path d="M64 241L875.135 272L1556.92 219L2157 305" stroke="#373737" stroke-width="6"/>
+<path d="M71 267L673.958 230L1228.05 285L1735.24 215L1942.42 304L2175 267" stroke="#373737" stroke-width="6"/>
+<path d="M53 209L540.242 300L1309.42 209L1613.94 259.05L2167 281.8" stroke="#373737" stroke-width="6"/>
+<path d="M76 300L559.784 250L1323.5 300L1625.87 272.5L2175 260" stroke="#373737" stroke-width="6"/>
 <defs>
 <linearGradient id="paint0_linear_158_49" x1="1129" y1="0" x2="1129" y2="1345" gradientUnits="userSpaceOnUse">
 <stop stop-color="#B3E8EE"/>

@@ -1,7 +1,6 @@
 import { createDropletSVG } from "../etapes/1_gouttes.js";
 import initSourcesHover from "../etapes/2_sources_eau.js";
 import initCouchesTerre from "../etapes/31_couches_terre.js";
-import { dropletPathD } from "../etapes/4_canalisations.js";
 
 const section4 = document.querySelector(".section4");
 const section32 = document.querySelector(".section32");
@@ -14,6 +13,20 @@ const droplet = svg.querySelector("#droplet");
 const dropletp = svg.querySelector("#droplet path");
 const smallDroplets = svg.querySelector("#small-droplets");
 
+// Path caché pour récupérer la position
+const hiddenSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+hiddenSVG.setAttribute("width", "760");
+hiddenSVG.setAttribute("height", "1205");
+hiddenSVG.style.position = "absolute";
+hiddenSVG.style.left = "-9999px";
+hiddenSVG.style.top = "-9999px";
+
+
+
+const firstTransitionDistance = 300;
+const lastTransitionStart = 860;
+let lastTranslateX = 0;
+
 window.addEventListener("load", () => {
   droplet.style.opacity = "1";
   droplet.style.display = "block";
@@ -22,25 +35,6 @@ window.addEventListener("load", () => {
   initSourcesHover();
   initCouchesTerre();
 });
-
-// Création du path SVG caché pour calculer la position
-const hiddenSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-hiddenSVG.setAttribute("width", "760");
-hiddenSVG.setAttribute("height", "1205");
-hiddenSVG.style.position = "absolute";
-hiddenSVG.style.left = "-9999px"; // Hors écran
-hiddenSVG.style.top = "-9999px";
-
-const motionPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-motionPath.setAttribute("d", dropletPathD);
-hiddenSVG.appendChild(motionPath);
-document.body.appendChild(hiddenSVG);
-
-const pathLength = motionPath.getTotalLength();
-
-const firstTransitionDistance = 300;
-const lastTransitionStart = 860;
-let lastTranslateX = 0;
 
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
@@ -54,6 +48,7 @@ window.addEventListener("scroll", () => {
   const isInSection32 = scrollTop + viewportHeight > section32Top;
 
   if (scrollTop < firstTransitionDistance) {
+    // Rapetissement progressif
     const progress = scrollTop / firstTransitionDistance;
     droplet.style.display = "block";
     droplet.style.opacity = 1 - progress * 0.3;
@@ -76,48 +71,43 @@ window.addEventListener("scroll", () => {
       });
     }, 50);
 
-  }
-  
-  else if (isInSection4) {
+  } else if (isInSection4) {
     const scrollInSection4 = scrollTop - section4Top;
-  
-    // Ralentissement de la progression
+
+    // Ralentissement pour suivre le path
     const slowFactor = 4;
     const usableHeight = section4Height;
     const progressOnPath = Math.min((scrollInSection4 / slowFactor) / usableHeight, 1);
-  
-    // Récupère le point sur le path
+
+    // Position sur le path
     const point = motionPath.getPointAtLength(pathLength * progressOnPath);
-  
-    const x = lastTranslateX;
-    const y = point.y;
-  
+
+    // Décalage horizontal progressif (de 0 à 200 px)
+    const maxXShift = 200;
+    const xShift = maxXShift * progressOnPath;
 
     const scale = 0.7;
-    const verticalCompensation = 1000 * (1 - scale); 
-  
+    const verticalCompensation = 1000 * (1 - scale);
+
     droplet.style.display = "block";
     droplet.style.opacity = "1";
     droplet.style.transition = "transform 0.1s linear";
-  
-    droplet.style.transform = `translate(${x}px, ${y - verticalCompensation}px) scale(${scale})`;
+
+    droplet.style.transform = `translate(${point.x + xShift}px, ${point.y - verticalCompensation}px) scale(${scale})`;
     droplet.style.transformOrigin = "center center";
-  
+
     dropletp.style.display = "block";
     dropletp.style.opacity = "1";
-  }
-  
-   else if (isInSection32) {
+
+  } else if (isInSection32) {
+   
     const maxTranslateX = -270;
     const progress = Math.min((scrollTop + viewportHeight - section32Top) / viewportHeight, 1);
     const translateX = maxTranslateX * progress;
-    lastTranslateX = translateX; 
+    lastTranslateX = translateX;
 
-
- 
-    const maxYOffset = 250; // pixels à remonter
-    const yOffset = maxYOffset * progress; // yOffset augmente avec le scroll
-    
+    const maxYOffset = 250;
+    const yOffset = maxYOffset * progress;
 
     const startColor = [2, 83, 110];
     const endColor = [0, 191, 255];
@@ -128,13 +118,11 @@ window.addEventListener("scroll", () => {
 
     dropletp.style.display = "block";
     dropletp.style.opacity = "1";
-    droplet.style.transform = `translateX(${translateX}px)`;
-    dropletp.setAttribute("fill", colorString);
-
-    droplet.style.transform = `translate(${translateX}px, ${-yOffset}px)`;
+    droplet.style.transform = `translateX(${translateX}px, ${-yOffset}px)`;
     dropletp.setAttribute("fill", colorString);
 
   } else {
+    // Reset goutte par défaut
     smallDroplets.style.display = "none";
     smallDroplets.classList.remove("active");
     smallDroplets.querySelectorAll("circle").forEach(c => c.classList.remove("disperse"));

@@ -162,22 +162,27 @@ section {
 }
 
 .section31 img {
-  width: 100%;
+  width:100vw;
   display: block;
 }
 
 .section32 {
-  width: fit-content; 
+  width: 100vw; 
   position: relative; 
   overflow: hidden; 
 }
 .section32 img {
-  width: 100%;
+  width: 70%;
+  align-items: center;
   display: block; 
 }
-
 .section4{
-  padding-right: 110px;
+  width: 100vw;
+}
+
+.section4 img {
+width: 70%;
+align-items: center;
 }
 
 .section31 {
