@@ -19,8 +19,8 @@ section {
   justify-content: center;
   color: white;
   font-size: 2em;
+  padding-top: 120px;
   background-color: #0F142A;
-  padding: 50px;
   box-sizing: border-box;
   overflow: hidden;
   flex-direction: column;
@@ -138,3 +138,14 @@ section {
   cursor: pointer;
 }
 
+.section31 {
+  padding-top: 300px;
+  width: 100vw; /* pleine largeur du viewport */
+  position: relative; /* si tu veux positionner d'autres éléments dedans */
+  overflow: hidden; /* utile si tu animes des éléments dedans */
+}
+
+.section31 img {
+  width: 100%;
+  display: block; /* supprime les espaces blancs sous les images inline */
+}
