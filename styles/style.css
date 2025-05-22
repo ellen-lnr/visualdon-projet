@@ -35,22 +35,18 @@ section {
 }
 
 .leaflet-container {
-  background-color: #0F142A;
   border-radius: 10px;
 }
 
 .leaflet-popup-content {
-  background-color: #0F142A;
-  color: white;
+  /* background-color: #4359bc; */
+  color: #0F142A;
 }
 
 .leaflet-popup-content-wrapper {
   border-radius: 10px;
 }
 
-.leaflet-popup-tip {
-  background-color: #0F142A;
-}
 
 .section1 {
   display: flex;
