@@ -47,7 +47,7 @@
   </section>
 
   <section class="section5">
-    <h3>Utilisation</h3>
+    <h3>Utilisation de l'eau</h3>
     <div id="container"></div>
     <script type="module">
       import { CircularInfo } from '/src/components/CircularInfo.js';
@@ -56,25 +56,25 @@
       const container = document.getElementById('container');
       container.innerHTML = `
         <circular-info size="600">
-          <info-item text="Douche">
+          <info-item title="Douche" description="La douche est l'un des principaux consommateurs d'eau dans une maison. Une douche de 5 minutes consomme en moyenne 50 litres d'eau.">
             <img src="/assets/svg/1_douche.svg" />
           </info-item>
-          <info-item text="Cuisine">
+          <info-item title="Cuisine" description="La cuisine est un lieu de forte consommation d'eau pour la préparation des repas et le nettoyage des ustensiles.">
             <img src="/assets/svg/2_cuisine.svg" />
           </info-item>
-          <info-item text="Lave-vaisselle">
+          <info-item title="Lave-vaisselle" description="Un cycle de lave-vaisselle consomme en moyenne 12 à 15 litres d'eau, selon le programme choisi.">
             <img src="/assets/svg/3_lave-vaiselle.svg" />
           </info-item>
-          <info-item text="Machine à laver">
+          <info-item title="Machine à laver" description="Une machine à laver consomme environ 50 à 70 litres d'eau par cycle, selon le programme et la charge.">
             <img src="/assets/svg/4_machine-a-laver.svg" />
           </info-item>
-          <info-item text="Lavabo">
+          <info-item title="Lavabo" description="Le lavabo est utilisé quotidiennement pour les ablutions et le lavage des mains, avec une consommation moyenne de 2 à 3 litres par minute.">
             <img src="/assets/svg/5_lavabo-sdb.svg" />
           </info-item>
-          <info-item text="Extérieurs">
+          <info-item title="Extérieurs" description="L'arrosage du jardin et le nettoyage extérieur sont des activités qui peuvent consommer beaucoup d'eau, surtout en été.">
             <img src="/assets/svg/6_exterieurs.svg" />
           </info-item>
-          <info-item text="Toilettes">
+          <info-item title="Toilettes" description="Les toilettes sont responsables d'une grande partie de la consommation d'eau domestique, avec environ 6 à 9 litres par chasse d'eau.">
             <img src="/assets/svg/7_toilette.svg" />
           </info-item>
         </circular-info>

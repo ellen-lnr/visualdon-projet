@@ -21,6 +21,7 @@ export class CircularInfo extends HTMLElement {
 
         items.forEach((item, i) => {
             const clone = item.cloneNode(true);
+            clone.setAttribute('data-angle', `${i * angleStep}deg`);
             clone.style.setProperty('--i', `${i}`)
             clone.style.setProperty('--angle', `${i * angleStep}deg`);
             clone.style.setProperty('--radius', `${radius}px`);
@@ -94,7 +95,8 @@ export class InfoItem extends HTMLElement {
     }
 
     connectedCallback() {
-        const text = this.getAttribute('text') || '';
+        const title = this.getAttribute('title') || '';
+        const description = this.getAttribute('description') || '';
 
         this.shadowRoot.innerHTML = `
       <style>
@@ -107,15 +109,14 @@ export class InfoItem extends HTMLElement {
           text-align: center;
           cursor: pointer;
         }
-    
 
         .wrapper {
-           display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      width: 96px;
-      height: 96px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 96px;
+          height: 96px;
         }
 
         .background-svg {
@@ -150,23 +151,53 @@ export class InfoItem extends HTMLElement {
 
         .tooltip {
           position: absolute;
-          top: -40px;
-          left: 50%;
-          transform: translateX(-50%);
-          font-family: arial;
+          font-family: Arial, sans-serif;
           background-color: #4863B5;
           color: white;
-          font-size: 18px;
-          padding: 4px 8px;
-          border-radius: 4px;
-          white-space: nowrap;
+          font-size: 14px;
+          padding: 12px;
+          border-radius: 8px;
           opacity: 0;
-          transition: opacity 0.2s ease;
+          transition: opacity 0.3s ease;
           pointer-events: none;
+          min-width: 200px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip h3 {
+          margin: 0 0 8px 0;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .tooltip p {
+          margin: 0;
+          line-height: 1.4;
         }
 
         :host(:hover) .tooltip {
           opacity: 1;
+        }
+
+        /* Position tooltips consistently on the right side of the container */
+        .tooltip {
+          position: absolute;
+          left: calc(100% + 20px);
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 20px;
+        }
+
+        /* Adjust positioning for bottom items */
+        :host([data-angle="-90deg"]) .tooltip,
+        :host([data-angle="-135deg"]) .tooltip,
+        :host([data-angle="-180deg"]) .tooltip,
+        :host([data-angle="-225deg"]) .tooltip,
+        :host([data-angle="-270deg"]) .tooltip {
+          top: 100%;
+          transform: translateY(8px);
+          left: 50%;
+          transform: translateX(-50%);
         }
 
         :host(:hover) .background-svg {
@@ -177,13 +208,16 @@ export class InfoItem extends HTMLElement {
 
       <div class="wrapper">
         <div class="background-svg">
-        <img style="width: 96px; height:96px;" src="/assets/svg/triangle.svg" alt="" />
+          <img style="width: 96px; height:96px;" src="/assets/svg/triangle.svg" alt="" />
         </div>
         <span class="icon">
           <slot></slot>
         </span>
       </div>
-      <div class="tooltip">${text}</div>
+      <div class="tooltip">
+        <h3>${title}</h3>
+        <p>${description}</p>
+      </div>
     `;
     }
 }
