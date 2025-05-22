@@ -1,6 +1,8 @@
 import { createDropletSVG } from "../etapes/1_gouttes.js";
 import initSourcesHover from "../etapes/2_sources_eau.js";
 import initCouchesTerre from "../etapes/31_couches_terre.js";
+import './components/CircularInfo.js'
+
 
 const section4 = document.querySelector(".section4");
 const section32 = document.querySelector(".section32");
