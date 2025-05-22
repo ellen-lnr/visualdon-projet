@@ -26,6 +26,32 @@ section {
   flex-direction: column;
 }
 
+#map {
+  width: 100%;
+  height: 600px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-container {
+  background-color: #0F142A;
+  border-radius: 10px;
+}
+
+.leaflet-popup-content {
+  background-color: #0F142A;
+  color: white;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+}
+
+.leaflet-popup-tip {
+  background-color: #0F142A;
+}
+
 .section1 {
   display: flex;
   flex-direction: column;

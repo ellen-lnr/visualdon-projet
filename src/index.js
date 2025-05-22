@@ -27,6 +27,8 @@ const firstTransitionDistance = 300;
 const lastTransitionStart = 860;
 let lastTranslateX = 0;
 
+import initMap from '../etapes/8_carte.js';
+
 window.addEventListener("load", () => {
   droplet.style.opacity = "1";
   droplet.style.display = "block";
@@ -34,6 +36,14 @@ window.addEventListener("load", () => {
 
   initSourcesHover();
   initCouchesTerre();
+
+  // Initialize the map
+  try {
+    const map = initMap();
+    console.log("Map initialized successfully");
+  } catch (error) {
+    console.error("Error initializing map:", error);
+  }
 });
 
 window.addEventListener("scroll", () => {
