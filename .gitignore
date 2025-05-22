@@ -16,4 +16,7 @@ node_modules
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+
+# Ignore les fichiers de configuration
 .DS_Store
