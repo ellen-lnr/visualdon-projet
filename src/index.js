@@ -41,6 +41,12 @@ window.addEventListener("load", () => {
 
   // Initialize the map
   try {
+    if (!Math.clamp) {
+      Math.clamp = function(x, min, max) {
+        return Math.max(min, Math.min(max, x));
+      };
+    }
+
     const map = initMap();
     console.log("Map initialized successfully");
   } catch (error) {
@@ -48,9 +54,36 @@ window.addEventListener("load", () => {
   }
 });
 
-window.addEventListener("scroll", () => {
+// Add scroll event listener for all effects
+window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   const viewportHeight = window.innerHeight;
+
+  // Check if we're in section8 (egouts)
+  const section8 = document.querySelector('.section8');
+  const isInSection8 = scrollTop + viewportHeight > section8.offsetTop && 
+                      scrollTop < section8.offsetTop + section8.offsetHeight;
+
+  if (isInSection8) {
+    const svgElement = section8.querySelector('img');
+    const svgRect = svgElement.getBoundingClientRect();
+    const dropletRect = droplet.getBoundingClientRect();
+
+    const svgCenterX = svgRect.left + svgRect.width / 2;
+    const svgCenterY = svgRect.top + svgRect.height / 2;
+    const distance = Math.sqrt(
+      Math.pow(svgCenterX - dropletRect.left - dropletRect.width / 2, 2) +
+      Math.pow(svgCenterY - dropletRect.top - dropletRect.height / 2, 2)
+    );
+
+    const maxDistance = 100;
+    const opacity = Math.clamp((distance / maxDistance), 0.1, 0.5);  // Adjusted min/max opacity values
+    droplet.style.opacity = opacity;
+    droplet.style.transition = 'opacity 0.3s ease';
+  } else {
+    droplet.style.opacity = "1";
+    droplet.style.transition = 'opacity 0.3s ease';
+  }
 
   const section4Top = section4.offsetTop;
   const section4Height = section4.offsetHeight;
