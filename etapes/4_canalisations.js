@@ -1,2 +1,28 @@
+export const fullDropletPath = `
+  M 380 0
+  L 380 180
+  C 380 200, 400 220, 420 260
+  L 420 400
+  C 420 430, 370 430, 370 460
+  L 370 600
+  L 380 1700
+`; // simplifié pour illustration
 
-export const dropletPathD = "M228.999 0.5V134C228.999 134 231.498 185.5 298.999 197.5C366.5 209.5 648.498 197.5 680.499 197.5C712.5 197.5 740.498 233 750.499 264.5C760.5 296 762 530.5 750.499 555.5C738.998 580.5 109.998 559.5 78.499 555.5C47 551.5 1.49872 590 1.49903 609C1.49934 628 1.49898 876.5 1.49903 943.5C1.49907 1010.5 28.4988 1017 78.499 1017C128.499 1017 402.999 1017 402.999 1017V1204.5";
+export function createMotionPathSVG() {
+  const hiddenSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  hiddenSVG.setAttribute("width", "800");
+  hiddenSVG.setAttribute("height", "1800");
+  hiddenSVG.style.position = "absolute";
+  hiddenSVG.style.left = "-9999px";
+  hiddenSVG.style.top = "-9999px";
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("id", "motionPath");
+  path.setAttribute("d", fullDropletPath);
+  path.setAttribute("fill", "none");
+
+  hiddenSVG.appendChild(path);
+  document.body.appendChild(hiddenSVG);
+
+  return path;
+}

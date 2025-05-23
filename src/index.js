@@ -1,6 +1,8 @@
 import { createDropletSVG } from "../etapes/1_gouttes.js";
 import initSourcesHover from "../etapes/2_sources_eau.js";
 import initCouchesTerre from "../etapes/31_couches_terre.js";
+import { createMotionPathSVG } from "../etapes/4_canalisations.js";
+
 import './components/CircularInfo.js'
 
 
