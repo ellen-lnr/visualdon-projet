@@ -144,3 +144,26 @@ window.addEventListener("scroll", () => {
     droplet.style.transform = "scale(1)";
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Crée le conteneur
+  const container = document.createElement('div');
+  container.className = 'evaporation-container';
+
+  // Crée le bouton
+  const button = document.createElement('button');
+  button.id = 'scrollTopBtn';
+  button.className = 'cloud-button';
+  button.innerHTML = '☁️⬆️ <span>Évaporation</span>';
+
+  // Ajoute le bouton dans le conteneur
+  container.appendChild(button);
+
+  // Ajoute le conteneur à la fin du body
+  document.body.appendChild(container);
+
+  // Action du bouton
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
